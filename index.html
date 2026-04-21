@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ressourcedatabasen — Oplæg til Virksomhedsberedskabet</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="nav" aria-label="slide navigation">
+  <div class="nav__brand">ressourcedatabasen</div>
+  <div class="nav__dots" id="dots"></div>
+  <div class="nav__count"><span id="current">1</span><span class="nav__sep">/</span><span>9</span></div>
+</nav>
+
+<button class="nav-arrow nav-arrow--prev" id="prev-btn" aria-label="Forrige slide">‹</button>
+<button class="nav-arrow nav-arrow--next" id="next-btn" aria-label="Næste slide">›</button>
+
+<main class="deck">
+
+  <section class="slide slide--title" data-slide="1">
+    <div class="bg-blobs"><span></span><span></span><span></span></div>
+    <div class="slide__inner">
+      <div class="t1-eyebrow reveal">Oplæg · Virksomhedsberedskabet · 28.04.2026</div>
+      <h1 class="t1 reveal reveal--1">Ressource<br>databasen<em>.</em></h1>
+      <p class="t1-sub reveal reveal--2">Én kilde. Tre ejere. Én <em>kriseklar</em> løsning.</p>
+      <p class="t1-italic reveal reveal--3">Et design-bud på hvordan man bygger beredskabsdata der holder, når alarmen går.</p>
+      <div class="t1-meta reveal reveal--4">
+        <span>Babak Bandpey</span>
+        <span class="dot">·</span>
+        <span>cocode.dk</span>
+        <span class="dot">·</span>
+        <span>bb@cocode.dk</span>
+      </div>
+      <div class="scroll-hint reveal reveal--5">scroll ↓</div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="2">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">02 · Spørgsmålet</div>
+        <h2 class="reveal reveal--1">Jeres udfordring, som jeg har forstået den</h2>
+      </header>
+      <ul class="bullets">
+        <li class="reveal reveal--1">Betalte konsulenter leverer data og har resultatansvar.</li>
+        <li class="reveal reveal--2">Medlemsvirksomheder bidrager pro bono. De ejer deres egne data. De er ikke jeres medarbejdere.</li>
+        <li class="reveal reveal--3">Det operative team skal kunne bruge databasen når alarmen går. Ikke om en time. Nu.</li>
+        <li class="reveal reveal--4">Tre forskellige ejerskaber. Tre forskellige tempi. Én fælles database.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="3">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">03 · Tese</div>
+        <h2 class="reveal reveal--1">Databasen er ikke problemet. <em>Styringsmodellen</em> er.</h2>
+      </header>
+      <p class="lede reveal reveal--1">Hver gang jeg har set dataprojekter skride, var det ikke på grund af teknikken.</p>
+      <p class="lede lede--em reveal reveal--2">Det var fordi ejerskab opstod tilfældigt i stedet for at blive designet.</p>
+      <p class="kicker reveal reveal--3">Hvis I designer ejerskabet bevidst fra dag 1, bliver databasen let. Hvis ikke, bliver den tung uanset hvor godt den er bygget.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="4">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">04 · Ejerskab</div>
+        <h2 class="reveal reveal--1">Tre roller, tre ejerskaber</h2>
+      </header>
+      <div class="locks locks--three">
+        <div class="lock reveal reveal--2" data-num="01">
+          <h3>Konsulenter</h3>
+          <p><strong>Ejer:</strong> leverancerne. <strong>Ansvar:</strong> kvalitet og ajourføring. <strong>Behov:</strong> værktøj der ikke spilder deres tid.</p>
+        </div>
+        <div class="lock reveal reveal--3" data-num="02">
+          <h3>Medlemsvirksomheder</h3>
+          <p><strong>Ejer:</strong> deres egne data. <strong>Bidrag:</strong> pro bono. <strong>Behov:</strong> fuld kontrol over hvad der deles, lave klikomkostninger.</p>
+        </div>
+        <div class="lock reveal reveal--4" data-num="03">
+          <h3>Operativt team</h3>
+          <p><strong>Ejer:</strong> brugen. <strong>Ansvar:</strong> beslutninger i krisen. <strong>Behov:</strong> hurtigt svar. Ingen tvivl om friskhed.</p>
+        </div>
+      </div>
+      <div class="callout reveal reveal--5">
+        <strong>Konsekvens</strong> adgangsmodellen skal afspejle tre interessenter, ikke én "bruger". Det former datamodellen, ikke omvendt.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="5">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">05 · Datamodel</div>
+        <h2 class="reveal reveal--1">Felt-ejerskab, ikke kun <em>række-ejerskab</em></h2>
+      </header>
+      <p class="lede reveal reveal--2">Klassisk række-baseret adgang rækker ikke her. Hver medlemsvirksomhed kan eje <em>nogle</em> felter i samme række.</p>
+      <div class="layers">
+        <div class="layer reveal reveal--3"><span class="layer__tag">Kolonne</span><span>Hver kolonne har en ejer. Kun ejeren må skrive. Andre kan bede om ændring.</span></div>
+        <div class="layer reveal reveal--4"><span class="layer__tag">Friskhed</span><span>Hvert felt har tidsstempel og "bekræftet af". Vises i klartekst i kriseviewet.</span></div>
+        <div class="layer reveal reveal--5"><span class="layer__tag">Audit</span><span>Hver ændring logges uforanderligt. Hvem, hvornår, før, efter. Ingen undtagelser.</span></div>
+        <div class="layer reveal reveal--6"><span class="layer__tag">Læs / skriv</span><span>Læs-adgang og skriv-adgang er to separate matricer. Mange må læse. Få må skrive.</span></div>
+      </div>
+      <div class="callout reveal reveal--7">
+        <strong>Eksempel</strong> når operativt team ser en adresse kl. 02, skal der stå præcis <em>hvem</em> der har bekræftet den og <em>hvornår</em>. Ellers er data ubrugelig.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="6">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">06 · Driftssikkerhed</div>
+        <h2 class="reveal reveal--1">Kriseklar er et <em>designkrav</em>, ikke en test</h2>
+      </header>
+      <p class="lede lede--em reveal reveal--2">Et system der kun virker når alt andet også virker, er ikke et beredskabssystem.</p>
+      <div class="grid">
+        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Offline-first</h3><p>Appen virker når netværket ikke gør. Synkroniserer når den kan.</p></div>
+        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Cached read-only fallback</h3><p>Hvis skriv er nede, kan der stadig læses fra seneste kendte tilstand.</p></div>
+        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Degraded-mode UX</h3><p>Synligt for brugeren når data er gammel eller systemet er i reservetilstand.</p></div>
+        <div class="card reveal reveal--6"><span class="dot-tag"></span><h3>To-regions opbevaring</h3><p>Fra dag 1. Ikke en optimering. En forudsætning.</p></div>
+      </div>
+      <p class="tag-line reveal reveal--7">Planlæg for når noget brænder, ikke for når alt er normalt.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="7">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">07 · Brugbarhed</div>
+        <h2 class="reveal reveal--1">Skal kunne bruges af en der ikke har sovet i 20 timer</h2>
+      </header>
+      <p class="lede reveal reveal--2">Brugbarhed i en krise er noget andet end brugbarhed i hverdagen. Jeg designer efter det hårde scenarie.</p>
+      <div class="grid">
+        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Kriseview som startside</h3><p>Én skærm. Svarer på "hvem, hvor, hvornår" på under tre sekunder.</p></div>
+        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Søgning først</h3><p>Som du ville gøre det på Google, ikke i et ERP. Navigation kommer bagefter.</p></div>
+        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Færre klik, større knapper</h3><p>Mobil først. Også tablet i en bil. Handsker på er et reelt krav.</p></div>
+        <div class="card reveal reveal--6"><span class="dot-tag"></span><h3>Ingen modals under krise</h3><p>Bekræftelser stjæler tid. <em>Undo</em> er bedre end "er du sikker?".</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="8">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">08 · Byggeplan</div>
+        <h2 class="reveal reveal--1">MVP bagfra. Fra kriseview, ud i kanterne.</h2>
+      </header>
+      <p class="lede lede--em reveal reveal--2">Jeg bygger ikke admin-funktioner før der findes en rigtig bruger, der har brug for dem.</p>
+      <div class="lessons lessons--yellow">
+        <div class="lesson reveal reveal--3">
+          <span class="lesson__n">01</span>
+          <div class="lesson__body">
+            <h3>Start med kriseviewet.</h3>
+            <p>Hvis det ikke virker i uge 1, er alt andet luksus. Det operative team skal kunne bruge systemet inden konsulenterne har indtastet alt.</p>
+          </div>
+        </div>
+        <div class="lesson reveal reveal--4">
+          <span class="lesson__n">02</span>
+          <div class="lesson__body">
+            <h3>Audit-log fra første commit.</h3>
+            <p>Ikke bagefter. Ikke "når vi får tid". Senere er det altid for sent og altid umuligt at rekonstruere.</p>
+          </div>
+        </div>
+        <div class="lesson reveal reveal--5">
+          <span class="lesson__n">03</span>
+          <div class="lesson__body">
+            <h3>Integrationer efter behov.</h3>
+            <p>Ingen SSO, ingen API'er, ingen eksport inden der er en konkret bruger der reelt har brug for det. Det sparer 60% af tiden.</p>
+          </div>
+        </div>
+        <div class="lesson reveal reveal--6">
+          <span class="lesson__n">04</span>
+          <div class="lesson__body">
+            <h3>Event-sourcing som standard.</h3>
+            <p>Så kan I altid svare på "hvad vidste systemet præcis i dette øjeblik?". Præcis hvad I får brug for i efterbearbejdning og rapportering.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--title slide--end" data-slide="9">
+    <div class="bg-blobs"><span></span><span></span><span></span></div>
+    <div class="slide__inner">
+      <div class="t1-eyebrow reveal">Afslutning · Spørgsmål</div>
+      <h1 class="t1 reveal reveal--1">Tak<em>.</em></h1>
+      <p class="t1-sub reveal reveal--2">Det her er ét bud. Hvor starter <em>I</em> fra?</p>
+      <p class="t1-italic reveal reveal--3">Jeg kommer også med spørgsmål. Det vigtigste: hvor meget af det I allerede har, kan genbruges?</p>
+      <div class="t1-meta reveal reveal--4">
+        <span>Babak Bandpey</span>
+        <span class="dot">·</span>
+        <span>bb@cocode.dk</span>
+        <span class="dot">·</span>
+        <span>cocode.dk</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
