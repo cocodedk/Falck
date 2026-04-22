@@ -13,7 +13,7 @@
 <nav class="nav" aria-label="slide navigation">
   <div class="nav__brand">ressourcedatabasen</div>
   <div class="nav__dots" id="dots"></div>
-  <div class="nav__count"><span id="current">1</span><span class="nav__sep">/</span><span>9</span></div>
+  <div class="nav__count"><span id="current">1</span><span class="nav__sep">/</span><span>20</span></div>
 </nav>
 
 <button class="nav-arrow nav-arrow--prev" id="prev-btn" aria-label="Forrige slide">‹</button>
@@ -42,35 +42,178 @@
   <section class="slide slide--content" data-slide="2">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">02 · Spørgsmålet</div>
-        <h2 class="reveal reveal--1">Jeres udfordring, som jeg har forstået den</h2>
+        <div class="eyebrow reveal">02 · Research</div>
+        <h2 class="reveal reveal--1">Hvad jeg har læst, <em>før</em> jeg åbnede munden</h2>
       </header>
-      <ul class="bullets">
-        <li class="reveal reveal--1">Betalte konsulenter leverer data og har resultatansvar.</li>
-        <li class="reveal reveal--2">Medlemsvirksomheder bidrager pro bono. De ejer deres egne data. De er ikke jeres medarbejdere.</li>
-        <li class="reveal reveal--3">Det operative team skal kunne bruge databasen når alarmen går. Ikke om en time. Nu.</li>
-        <li class="reveal reveal--4">Tre forskellige ejerskaber. Tre forskellige tempi. Én fælles database.</li>
-      </ul>
+      <p class="lede lede--em reveal reveal--2">Jeg er ikke mødt op med en idé. Jeg er mødt op med en læseliste.</p>
+      <div class="sources">
+        <div class="source-col reveal reveal--3">
+          <div class="source-col__label">Offentlige kilder</div>
+          <ul>
+            <li>Falcks egne sider om VB og brochure</li>
+            <li>Beredskabsstyrelsens krisestyringsvejledning</li>
+            <li>Beredskabsloven kapitel 5</li>
+            <li>NOST-siden hos Styrelsen for Samfundssikkerhed</li>
+            <li>LinkedIn-jobopslaget, helt igennem</li>
+            <li>KL's beredskabsanalyse 2025</li>
+            <li>Industriens Fonds projektbeskrivelse</li>
+          </ul>
+        </div>
+        <div class="source-col reveal reveal--4">
+          <div class="source-col__label">Præcedenser og jura</div>
+          <ul>
+            <li>DK: RBIS · ODIN · ODIN2 · IDUN</li>
+            <li>US: CISA Gateway · DoD IBIDS</li>
+            <li>UK: ResilienceDirect</li>
+            <li>FI: NESA · SE: MSB · NO: DSB</li>
+            <li>GDPR · EU Data Act · Data Governance Act</li>
+            <li>Cirkulære om sikkerhedsbeskyttelse</li>
+          </ul>
+        </div>
+      </div>
     </div>
   </section>
 
   <section class="slide slide--content" data-slide="3">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">03 · Tese</div>
-        <h2 class="reveal reveal--1">Databasen er ikke problemet. <em>Styringsmodellen</em> er.</h2>
+        <div class="eyebrow reveal">03 · Spørgsmålet</div>
+        <h2 class="reveal reveal--1">Tre ejerskaber. <em>Ingen kompromis.</em></h2>
       </header>
-      <p class="lede reveal reveal--1">Hver gang jeg har set dataprojekter skride, var det ikke på grund af teknikken.</p>
-      <p class="lede lede--em reveal reveal--2">Det var fordi ejerskab opstod tilfældigt i stedet for at blive designet.</p>
-      <p class="kicker reveal reveal--3">Hvis I designer ejerskabet bevidst fra dag 1, bliver databasen let. Hvis ikke, bliver den tung uanset hvor godt den er bygget.</p>
+      <p class="lede reveal reveal--2">Du skrev at konsulenter, medlemmer og operativt team har forskelligt ejerskab, ansvar og behov. Uden kompromis på kvalitet, drift og brugbarhed.</p>
+      <p class="lede lede--em reveal reveal--3">Det er det rigtige spørgsmål. Det har tre svar.</p>
+      <ul class="bullets">
+        <li class="reveal reveal--4">Styringsmodellen skal designes, ikke opstå</li>
+        <li class="reveal reveal--5">Datamodellen skal rumme tre lag, ikke ét</li>
+        <li class="reveal reveal--6">Kriseklar skal være et designkrav, ikke en test</li>
+      </ul>
+      <p class="kicker reveal reveal--7">De næste 17 slides viser hvordan.</p>
     </div>
   </section>
 
   <section class="slide slide--content" data-slide="4">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">04 · Ejerskab</div>
-        <h2 class="reveal reveal--1">Tre roller, tre ejerskaber</h2>
+        <div class="eyebrow reveal">04 · Kontekst</div>
+        <h2 class="reveal reveal--1">VB er <em>interface</em>, ikke kommandostruktur</h2>
+      </header>
+      <p class="lede reveal reveal--2">Det danske beredskab koordineres af NOST under Styrelsen for Samfundssikkerhed. Deltagere: Rigspolitiet, PET, FE, Forsvarskommandoen, Beredskabsstyrelsen, Sundhedsstyrelsen, Trafikstyrelsen, flere.</p>
+      <div class="nost reveal reveal--3">
+        <div class="nost__core">
+          <span class="nost__label">Offentligt</span>
+          <span class="nost__name">NOST</span>
+          <span class="nost__sub">Styrelsen for Samfundssikkerhed</span>
+        </div>
+        <div class="nost__chips">
+          <span>Rigspolitiet</span>
+          <span>PET</span>
+          <span>FE</span>
+          <span>Forsvarskommandoen</span>
+          <span>Beredskabsst.</span>
+          <span>Sundhedsst.</span>
+          <span>Trafikst.</span>
+        </div>
+        <div class="nost__flow">
+          <span class="nost__flow__up">tilbud →</span>
+          <span class="nost__flow__down">← aktivering</span>
+        </div>
+        <div class="nost__port">
+          <span class="nost__label nost__label--red">Privat</span>
+          <span class="nost__name">VB</span>
+          <span class="nost__sub">Aftalt indgang · Ressourcepulje</span>
+        </div>
+      </div>
+      <div class="callout reveal reveal--4">
+        <strong>Politisk linje</strong> <em>offentligt kommando, privat bidrag</em>. Det må aldrig være uklart i databasen, hvem der træffer beslutninger. Det er ikke VB.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="5">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">05 · Principper</div>
+        <h2 class="reveal reveal--1">Fem principper databasen skal <em>passe til</em></h2>
+      </header>
+      <div class="principles">
+        <div class="principle reveal reveal--2"><span class="principle__n">01</span><div><h3>Sektoransvar</h3><p>Hver myndighed ejer sit område</p></div></div>
+        <div class="principle reveal reveal--3"><span class="principle__n">02</span><div><h3>Subsidiaritet</h3><p>Løses på laveste relevante niveau</p></div></div>
+        <div class="principle reveal reveal--4"><span class="principle__n">03</span><div><h3>Samarbejde</h3><p>På tværs af sektorer</p></div></div>
+        <div class="principle reveal reveal--5"><span class="principle__n">04</span><div><h3>Handlefrihed</h3><p>Myndigheder kan tilpasse</p></div></div>
+        <div class="principle reveal reveal--6"><span class="principle__n">05</span><div><h3>Ledelse</h3><p>Klart ansvar i krisen</p></div></div>
+      </div>
+      <p class="kicker reveal reveal--7">Databasen skal passe til alle fem. Ikke bøje dem. Hvis systemet overtager beslutninger eller slører ansvar, bliver det ikke brugt.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="6">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">06 · Præcedens</div>
+        <h2 class="reveal reveal--1">Lektien: <em>netværket</em> slår platformen</h2>
+      </header>
+      <div class="matrix">
+        <div class="matrix__row matrix__row--head reveal reveal--2"><span>Land</span><span>System</span><span>Status</span><span>Note</span></div>
+        <div class="matrix__row reveal reveal--3"><span>US</span><span>CISA Gateway</span><span class="flag flag--green">virker</span><span>Beskyttet fællesplatform. PCII-certificering for følsomme data.</span></div>
+        <div class="matrix__row reveal reveal--4"><span>US</span><span>DoD IBIDS</span><span class="flag flag--red">ikke nok</span><span>GAO: uklart ejerskab, svag leverandør-dækning.</span></div>
+        <div class="matrix__row reveal reveal--5"><span>UK</span><span>ResilienceDirect</span><span class="flag flag--amber">blandet</span><span>Gratis, Official-Sensitive klar. Alpha 2024: rød. Migreret til cloud.</span></div>
+        <div class="matrix__row reveal reveal--6"><span>FI</span><span>NESA</span><span class="flag flag--green">virker</span><span>Sektorspuljer, tillid, aftalt ramme. Klareste positive reference.</span></div>
+        <div class="matrix__row reveal reveal--7"><span>SE / NO</span><span>MSB / DSB</span><span class="flag flag--amber">governance</span><span>Totalforsvar. Strukturerede aftaler. Intet stort centralregister.</span></div>
+      </div>
+      <p class="tag-line reveal reveal--8">De systemer der holder har klart ejerskab, gode incitamenter og øvelser. Ikke den pæneste kode.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="7">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">07 · Danske systemer</div>
+        <h2 class="reveal reveal--1">RBIS · ODIN2 · IDUN</h2>
+      </header>
+      <p class="lede reveal reveal--2">Danmark har allerede tre systemer vi kan lære af. Fællesnævneren: skriv og læs er to veje. Offentlig og restricted er to lag.</p>
+      <div class="bridge">
+        <div class="bridge__col reveal reveal--3">
+          <div class="bridge__col__tag">Skriv-sti</div>
+          <h3>ODIN2</h3>
+          <p>Indberetningssystem. Bygges nu fra bunden, fordi den gamle ikke kunne leve op til GDPR. Beredskabsstyrelsens egne ord.</p>
+        </div>
+        <div class="bridge__link reveal reveal--4">
+          <span>event-store</span>
+          <em>(uforanderlig)</em>
+        </div>
+        <div class="bridge__col reveal reveal--5">
+          <div class="bridge__col__tag">Læs-sti</div>
+          <h3>IDUN + RBIS</h3>
+          <p>BI på Power BI Report Server on-prem. Offentlig side + restricted side med MitID. RBIS supplerer med ressourcekatalog.</p>
+        </div>
+      </div>
+      <div class="callout reveal reveal--6">
+        <strong>Mønster</strong> CQRS i dansk beredskabssprog. Skrive-sti optimeret til indtastning og audit. Læse-sti optimeret til kriseview og BI. Samme data. To adgangsmønstre.
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="8">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">08 · Tese</div>
+        <h2 class="reveal reveal--1">Databasen er ikke problemet. <em>Styringsmodellen</em> er.</h2>
+      </header>
+      <p class="lede reveal reveal--2">Hver gang jeg har set dataprojekter skride, var det ikke på grund af teknikken. Det var fordi ejerskab opstod tilfældigt i stedet for at blive designet.</p>
+      <div class="quotes reveal reveal--3">
+        <div class="quote-row">Offentlig myndighed beholder kommandoen.</div>
+        <div class="quote-row">Private firmaer støtter. Erstatter ikke.</div>
+        <div class="quote-row">Aftaler skal på plads <em>før</em> krisen. Ikke under.</div>
+      </div>
+      <p class="kicker reveal reveal--4">Kims egne tre linjer fra pressen. Det er designspec, ikke bare citater.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="9">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">09 · Ejerskab</div>
+        <h2 class="reveal reveal--1">Hvem ejer hvad</h2>
       </header>
       <div class="locks locks--three">
         <div class="lock reveal reveal--2" data-num="01">
@@ -79,11 +222,11 @@
         </div>
         <div class="lock reveal reveal--3" data-num="02">
           <h3>Medlemsvirksomheder</h3>
-          <p><strong>Ejer:</strong> deres egne data. <strong>Bidrag:</strong> pro bono. <strong>Behov:</strong> fuld kontrol over hvad der deles, lave klikomkostninger.</p>
+          <p><strong>Ejer:</strong> deres egne data. <strong>Bidrag:</strong> pro bono. <strong>Behov:</strong> fuld kontrol over deling. Få klik at holde data frisk.</p>
         </div>
         <div class="lock reveal reveal--4" data-num="03">
           <h3>Operativt team</h3>
-          <p><strong>Ejer:</strong> brugen. <strong>Ansvar:</strong> beslutninger i krisen. <strong>Behov:</strong> hurtigt svar. Ingen tvivl om friskhed.</p>
+          <p><strong>Ejer:</strong> brugen. <strong>Ansvar:</strong> beslutninger i krisen. <strong>Behov:</strong> hurtigt svar, ingen tvivl om friskhed.</p>
         </div>
       </div>
       <div class="callout reveal reveal--5">
@@ -92,105 +235,235 @@
     </div>
   </section>
 
-  <section class="slide slide--content" data-slide="5">
+  <section class="slide slide--content" data-slide="10">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">05 · Datamodel</div>
-        <h2 class="reveal reveal--1">Felt-ejerskab, ikke kun <em>række-ejerskab</em></h2>
+        <div class="eyebrow reveal">10 · Autonomi</div>
+        <h2 class="reveal reveal--1">Ikke-bindende medlemskab er <em>grundvilkåret</em></h2>
       </header>
-      <p class="lede reveal reveal--2">Klassisk række-baseret adgang rækker ikke her. Hver medlemsvirksomhed kan eje <em>nogle</em> felter i samme række.</p>
-      <div class="layers">
-        <div class="layer reveal reveal--3"><span class="layer__tag">Kolonne</span><span>Hver kolonne har en ejer. Kun ejeren må skrive. Andre kan bede om ændring.</span></div>
-        <div class="layer reveal reveal--4"><span class="layer__tag">Friskhed</span><span>Hvert felt har tidsstempel og "bekræftet af". Vises i klartekst i kriseviewet.</span></div>
-        <div class="layer reveal reveal--5"><span class="layer__tag">Audit</span><span>Hver ændring logges uforanderligt. Hvem, hvornår, før, efter. Ingen undtagelser.</span></div>
-        <div class="layer reveal reveal--6"><span class="layer__tag">Læs / skriv</span><span>Læs-adgang og skriv-adgang er to separate matricer. Mange må læse. Få må skrive.</span></div>
+      <p class="lede reveal reveal--2">Falck siger det selv. Medlemskab er ikke-bindende. Medlemmer kan afvise en aktivering. Det er ikke en begrænsning at designe uden om. Det er vilkåret.</p>
+      <div class="toggle reveal reveal--3">
+        <span class="toggle__on">Tilgængelig</span>
+        <span class="toggle__knob"></span>
+        <span class="toggle__off">Ikke nu</span>
       </div>
-      <div class="callout reveal reveal--7">
-        <strong>Eksempel</strong> når operativt team ser en adresse kl. 02, skal der stå præcis <em>hvem</em> der har bekræftet den og <em>hvornår</em>. Ellers er data ubrugelig.
+      <ul class="bullets">
+        <li class="reveal reveal--4">"Tilgængelig nu"-status er dynamisk, ikke statisk</li>
+        <li class="reveal reveal--5">Medlemmet sætter status selv på få sekunder</li>
+        <li class="reveal reveal--6">Aktivering er samtykke-baseret, ikke automatisk</li>
+        <li class="reveal reveal--7">Et nej logges, begrundes, anonymiseres. Lige så vigtigt som et ja.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="11">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">11 · Kerne</div>
+        <h2 class="reveal reveal--1">Ikke en liste. Et <em>matching-system</em>.</h2>
+      </header>
+      <div class="chain reveal reveal--2">
+        <div class="chain__step"><span>01</span><p>Krisescenarie</p></div>
+        <span class="chain__arrow">→</span>
+        <div class="chain__step"><span>02</span><p>Ressourceprofil</p></div>
+        <span class="chain__arrow">→</span>
+        <div class="chain__step"><span>03</span><p>Firmaer i geografien</p></div>
+        <span class="chain__arrow">→</span>
+        <div class="chain__step"><span>04</span><p>Kontaktvej</p></div>
+      </div>
+      <div class="example reveal reveal--4">
+        <div class="example__label">Eksempel fra Industriens Fonds egne illustrationer</div>
+        <div class="example__grid">
+          <div><strong>Scenarie</strong><span>Plejehjem i Odense mister strøm i 3 døgn</span></div>
+          <div><strong>Profil</strong><span>Generator 100kVA+ · diesel · autoriseret elektriker · varm mad</span></div>
+          <div><strong>Aktiverbare</strong><span>Arkil · OK · lokale elinstallatører · Salling Group</span></div>
+          <div><strong>Kontaktvej</strong><span>VB-operationscenter ringer medlemmernes krisekontakter</span></div>
+        </div>
+      </div>
+      <p class="tag-line reveal reveal--6">Databasen skal svare på det. Ikke bare vise en liste.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="12">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">12 · Datamodel</div>
+        <h2 class="reveal reveal--1">Felter har <em>ejere</em>. Felter har <em>kilder</em>.</h2>
+      </header>
+      <p class="lede reveal reveal--2">Klassisk række-baseret adgang rækker ikke. Flere interessenter kan eje forskellige felter i samme række.</p>
+      <div class="layers">
+        <div class="layer reveal reveal--3"><span class="layer__tag">Kolonne-ejer</span><span>Kun ejeren skriver. Andre anmoder om ændring.</span></div>
+        <div class="layer reveal reveal--4"><span class="layer__tag">Provenance</span><span>Fire typer pr. felt: indtastet · valideret · udledt · myndighedsanmodet.</span></div>
+        <div class="layer reveal reveal--5"><span class="layer__tag">Adgangslag</span><span>Tre pr. felt: offentligt · medlemmet selv · operativt team.</span></div>
+        <div class="layer reveal reveal--6"><span class="layer__tag">Friskhed</span><span>Tidsstempel og "bekræftet af" vises i klartekst i kriseviewet.</span></div>
+        <div class="layer reveal reveal--7"><span class="layer__tag">Audit</span><span>Hver ændring logges uforanderligt. Hvem, hvornår, før, efter.</span></div>
+      </div>
+      <div class="callout reveal reveal--8">
+        <strong>Mønster</strong> IDUN's offentlig/restricted, men på feltniveau. Ikke nyt. Bare strammere.
       </div>
     </div>
   </section>
 
-  <section class="slide slide--content" data-slide="6">
+  <section class="slide slide--content" data-slide="13">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">06 · Driftssikkerhed</div>
-        <h2 class="reveal reveal--1">Kriseklar er et <em>designkrav</em>, ikke en test</h2>
+        <div class="eyebrow reveal">13 · Jura</div>
+        <h2 class="reveal reveal--1">GDPR · Data Act · Beredskabsloven</h2>
+      </header>
+      <div class="stack">
+        <div class="stack__tier reveal reveal--2">
+          <span class="stack__tag">Data</span>
+          <div><h3>Medlemsdata i databasen</h3><p>Hver adgang har et formål og en hjemmel. Myndighedsanmodning er egen datatype med eget audit-spor.</p></div>
+        </div>
+        <div class="stack__tier reveal reveal--3">
+          <span class="stack__tag">EU Data Act</span>
+          <div><h3>Myndighedsanmodning i ekstraordinært behov</h3><p>Naturkatastrofer, sundhedskriser, cyberhændelser. Krav: nødvendighed, formål, slet efter brug.</p></div>
+        </div>
+        <div class="stack__tier reveal reveal--4">
+          <span class="stack__tag">Data Governance Act</span>
+          <div><h3>Beskyttede offentlige data</h3><p>Inkluderer forretningshemmeligheder. Sikker behandling. Ingen diskrimination.</p></div>
+        </div>
+        <div class="stack__tier reveal reveal--5">
+          <span class="stack__tag">GDPR</span>
+          <div><h3>Personoplysninger</h3><p>Fundamentet. Intet nyt. Gælder altid.</p></div>
+        </div>
+        <div class="stack__tier stack__tier--base reveal reveal--6">
+          <span class="stack__tag">Beredskabsloven</span>
+          <div><h3>Kapitel 5 · Sektoransvar</h3><p>Forankrer hvem der må hvad. Ikke teknisk, men rammesætter designet.</p></div>
+        </div>
+      </div>
+      <p class="tag-line reveal reveal--7">Uden forhåndsaftale bliver både jura og tillid blokeret. KL siger det selv i 2025.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="14">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">14 · Drift</div>
+        <h2 class="reveal reveal--1">Kriseklar er et <em>designkrav</em>. Ikke en test.</h2>
       </header>
       <p class="lede lede--em reveal reveal--2">Et system der kun virker når alt andet også virker, er ikke et beredskabssystem.</p>
-      <div class="grid">
-        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Offline-first</h3><p>Appen virker når netværket ikke gør. Synkroniserer når den kan.</p></div>
-        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Cached read-only fallback</h3><p>Hvis skriv er nede, kan der stadig læses fra seneste kendte tilstand.</p></div>
-        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Degraded-mode UX</h3><p>Synligt for brugeren når data er gammel eller systemet er i reservetilstand.</p></div>
-        <div class="card reveal reveal--6"><span class="dot-tag"></span><h3>To-regions opbevaring</h3><p>Fra dag 1. Ikke en optimering. En forudsætning.</p></div>
+      <div class="stairs">
+        <div class="stair reveal reveal--3"><span class="stair__n">01</span><h3>Alt virker</h3><p>Normal drift. Offentlig og restricted læsning. Skriv fra medlem og konsulent.</p></div>
+        <div class="stair reveal reveal--4"><span class="stair__n">02</span><h3>Skrive-lag nede</h3><p>Read-only fallback fra seneste kendte tilstand. Tydeligt markeret for brugeren.</p></div>
+        <div class="stair reveal reveal--5"><span class="stair__n">03</span><h3>Netværk vakler</h3><p>Offline-cache med krisekontakter. Op-teamet har telefonnumre lokalt.</p></div>
+        <div class="stair reveal reveal--6"><span class="stair__n">04</span><h3>Alt nede</h3><p>Manuel procedure som bagstopper. ODIN har det. Vi publicerer det samme.</p></div>
       </div>
-      <p class="tag-line reveal reveal--7">Planlæg for når noget brænder, ikke for når alt er normalt.</p>
+      <p class="tag-line reveal reveal--7">Degraderet tilstand er designet, ikke tilfældig.</p>
     </div>
   </section>
 
-  <section class="slide slide--content" data-slide="7">
+  <section class="slide slide--content" data-slide="15">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">07 · Brugbarhed</div>
+        <div class="eyebrow reveal">15 · Brug</div>
         <h2 class="reveal reveal--1">Skal kunne bruges af en der ikke har sovet i 20 timer</h2>
       </header>
-      <p class="lede reveal reveal--2">Brugbarhed i en krise er noget andet end brugbarhed i hverdagen. Jeg designer efter det hårde scenarie.</p>
+      <p class="lede reveal reveal--2">Brugbarhed i en krise er noget andet end brugbarhed til hverdag. Jeg designer til det hårde scenarie.</p>
       <div class="grid">
-        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Kriseview som startside</h3><p>Én skærm. Svarer på "hvem, hvor, hvornår" på under tre sekunder.</p></div>
-        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Søgning først</h3><p>Som du ville gøre det på Google, ikke i et ERP. Navigation kommer bagefter.</p></div>
-        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Færre klik, større knapper</h3><p>Mobil først. Også tablet i en bil. Handsker på er et reelt krav.</p></div>
-        <div class="card reveal reveal--6"><span class="dot-tag"></span><h3>Ingen modals under krise</h3><p>Bekræftelser stjæler tid. <em>Undo</em> er bedre end "er du sikker?".</p></div>
+        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Kriseview som startside</h3><p>Én skærm. Hvem, hvor, hvornår på under tre sekunder.</p></div>
+        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Søgning først</h3><p>"Generator over 100kVA i Region Syddanmark, tilgængelig nu." Navigation bagefter.</p></div>
+        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Færre klik, større knapper</h3><p>Mobil først. Tablet i bilen. Handsker er et reelt krav.</p></div>
+        <div class="card reveal reveal--6"><span class="dot-tag"></span><h3>Ingen modals i krisen</h3><p><em>Undo</em> er bedre end "er du sikker?". Hverdagsmodaler gælder ikke her.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="slide slide--content" data-slide="8">
+  <section class="slide slide--content" data-slide="16">
     <div class="slide__inner">
       <header class="head">
-        <div class="eyebrow reveal">08 · Byggeplan</div>
-        <h2 class="reveal reveal--1">MVP bagfra. Fra kriseview, ud i kanterne.</h2>
+        <div class="eyebrow reveal">16 · Blokeringer</div>
+        <h2 class="reveal reveal--1">Det KL allerede har <em>sagt højt</em></h2>
       </header>
-      <p class="lede lede--em reveal reveal--2">Jeg bygger ikke admin-funktioner før der findes en rigtig bruger, der har brug for dem.</p>
-      <div class="lessons lessons--yellow">
-        <div class="lesson reveal reveal--3">
-          <span class="lesson__n">01</span>
-          <div class="lesson__body">
-            <h3>Start med kriseviewet.</h3>
-            <p>Hvis det ikke virker i uge 1, er alt andet luksus. Det operative team skal kunne bruge systemet inden konsulenterne har indtastet alt.</p>
-          </div>
-        </div>
-        <div class="lesson reveal reveal--4">
-          <span class="lesson__n">02</span>
-          <div class="lesson__body">
-            <h3>Audit-log fra første commit.</h3>
-            <p>Ikke bagefter. Ikke "når vi får tid". Senere er det altid for sent og altid umuligt at rekonstruere.</p>
-          </div>
-        </div>
-        <div class="lesson reveal reveal--5">
-          <span class="lesson__n">03</span>
-          <div class="lesson__body">
-            <h3>Integrationer efter behov.</h3>
-            <p>Ingen SSO, ingen API'er, ingen eksport inden der er en konkret bruger der reelt har brug for det. Det sparer 60% af tiden.</p>
-          </div>
-        </div>
-        <div class="lesson reveal reveal--6">
-          <span class="lesson__n">04</span>
-          <div class="lesson__body">
-            <h3>Event-sourcing som standard.</h3>
-            <p>Så kan I altid svare på "hvad vidste systemet præcis i dette øjeblik?". Præcis hvad I får brug for i efterbearbejdning og rapportering.</p>
-          </div>
-        </div>
+      <p class="lede reveal reveal--2">KL's beredskabsanalyse 2025 siger det direkte. De største blokeringer for privat-offentligt beredskab er ikke tekniske.</p>
+      <ul class="check">
+        <li class="reveal reveal--3"><span class="check__mark"></span><strong>Forsikring</strong> under aktivering</li>
+        <li class="reveal reveal--4"><span class="check__mark"></span><strong>Arbejdstidsregler</strong> når medarbejdere udlånes</li>
+        <li class="reveal reveal--5"><span class="check__mark"></span><strong>Juridisk hjemmel</strong> for at aktivere</li>
+        <li class="reveal reveal--6"><span class="check__mark"></span><strong>Ansvar</strong> hvis noget går galt</li>
+        <li class="reveal reveal--7"><span class="check__mark"></span><strong>Kompensation</strong> for indsats og databrug</li>
+        <li class="reveal reveal--8"><span class="check__mark"></span><strong>No-show-risiko</strong> når krisen rammer</li>
+      </ul>
+      <div class="callout reveal reveal--9">
+        <strong>Designkonsekvens</strong> databasen kan ikke løse de seks. Men den kan synliggøre at de er håndteret. Rammeaftaler er metadata. Ikke bilag.
       </div>
     </div>
   </section>
 
-  <section class="slide slide--title slide--end" data-slide="9">
+  <section class="slide slide--content" data-slide="17">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">17 · Hosting</div>
+        <h2 class="reveal reveal--1">Hybrid cloud. <em>Kontrolleret enklave.</em></h2>
+      </header>
+      <p class="lede reveal reveal--2">Azure Denmark East åbnede marts 2026. M365 Denmark-geografi april 2026. Godt for residens og latency. Men data-residens løser ikke klassifikation.</p>
+      <div class="tiers">
+        <div class="tier tier--cloud reveal reveal--3">
+          <span class="tier__tag">Samarbejdslag</span>
+          <h3>Dansk-hostet cloud</h3>
+          <p>Azure DK, M365 DK. Almindelig drift. Dokumenter, samarbejde, bulk-workflows. Efter DPIA og assessment.</p>
+        </div>
+        <div class="tier tier--enclave reveal reveal--4">
+          <span class="tier__tag">Sensitivt lag</span>
+          <h3>Segregeret enklave</h3>
+          <p>Separat netværk. Separat nøglelager. Formelt godkendt efter Cirkulære om sikkerhedsbeskyttelse. FORTROLIGT kræver det. TTJ nok ikke.</p>
+        </div>
+        <div class="tier tier--audit reveal reveal--5">
+          <span class="tier__tag">Audit-lag</span>
+          <h3>Dedikeret hardening</h3>
+          <p>Immuterbar log. Separat fra skrive-laget. Tilsyn kan læse. Selv systemejeren kan ikke redigere.</p>
+        </div>
+      </div>
+      <p class="tag-line reveal reveal--6">Jeg siger ikke "Azure løser det". Jeg siger "Azure er nyttigt hvor det passer".</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="18">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">18 · AI</div>
+        <h2 class="reveal reveal--1">Tre konkrete steder. <em>Ikke magi.</em></h2>
+      </header>
+      <p class="lede reveal reveal--2">Rollen hedder "Digitalisering og AI". Her er hvad AI reelt gør i systemet.</p>
+      <div class="grid">
+        <div class="card reveal reveal--3"><span class="dot-tag"></span><h3>Konsulent-enrichment</h3><p>Interview + dokumenter ind. Struktureret kapacitetsdata ud. Konsulenten godkender før det lander. <em>Hurtigere</em>, ikke overflødig.</p></div>
+        <div class="card reveal reveal--4"><span class="dot-tag"></span><h3>Medlem-onboarding</h3><p>Medlemmet beskriver kapaciteter i fri prosa. AI mapper til taksonomi. Medlemmet bekræfter eller retter. <em>Fjerner formular-frygt.</em></p></div>
+        <div class="card reveal reveal--5"><span class="dot-tag"></span><h3>Naturlig søgning</h3><p>"Generator over 100kVA i Region Syddanmark med fører." Op-teamet skriver. AI oversætter til query. <em>Mennesket vælger.</em></p></div>
+      </div>
+      <p class="tag-line reveal reveal--6">AI gør mennesker hurtigere. Ikke mere.</p>
+    </div>
+  </section>
+
+  <section class="slide slide--content" data-slide="19">
+    <div class="slide__inner">
+      <header class="head">
+        <div class="eyebrow reveal">19 · Plan</div>
+        <h2 class="reveal reveal--1">MVP <em>bagfra</em>. Fra kriseviewet, ud i kanterne.</h2>
+      </header>
+      <p class="lede lede--em reveal reveal--2">Jeg bygger ikke admin-funktioner før der findes en rigtig bruger, der har brug for dem.</p>
+      <div class="timeline">
+        <div class="tl-step reveal reveal--3"><span class="tl-step__w">Uge 1–4</span><h3>Kriseviewet</h3><p>Selv med falske data. Op-teamet skal kunne navigere.</p></div>
+        <div class="tl-step reveal reveal--4"><span class="tl-step__w">Uge 5–8</span><h3>Medlemsindtastning</h3><p>Tre referencevirksomheder: Arkil, OK, Salling Group.</p></div>
+        <div class="tl-step reveal reveal--5"><span class="tl-step__w">Uge 9–12</span><h3>Audit + provenance</h3><p>Bagefter er det for sent. Og altid umuligt at rekonstruere.</p></div>
+        <div class="tl-step reveal reveal--6"><span class="tl-step__w">Uge 13–16</span><h3>Første aktiveringsøvelse</h3><p>Plejehjem i Odense som scenarie.</p></div>
+        <div class="tl-step tl-step--end reveal reveal--7"><span class="tl-step__w">Uge 17+</span><h3>Konsulent-AI og skalering</h3><p>Mod 50 medlemmer. Integrationer i NOST-kanaler når vi har noget, de gider integrere med.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide slide--title slide--end" data-slide="20">
     <div class="bg-blobs"><span></span><span></span><span></span></div>
     <div class="slide__inner">
-      <div class="t1-eyebrow reveal">Afslutning · Spørgsmål</div>
+      <div class="t1-eyebrow reveal">Afslutning · Mine spørgsmål</div>
       <h1 class="t1 reveal reveal--1">Tak<em>.</em></h1>
-      <p class="t1-sub reveal reveal--2">Det her er ét bud. Hvor starter <em>I</em> fra?</p>
-      <p class="t1-italic reveal reveal--3">Jeg kommer også med spørgsmål. Det vigtigste: hvor meget af det I allerede har, kan genbruges?</p>
+      <p class="t1-sub reveal reveal--2">Jeg har læst. Jeg har hypoteser. Jeg mangler <em>jeres</em> virkelighed.</p>
+      <ol class="qlist reveal reveal--3">
+        <li>Hvad er Cecilie Wagners rolle i forhold til denne stilling?</li>
+        <li>Hvilket klassifikationsniveau forventer I data vil ligge på?</li>
+        <li>Hvordan tænker I integrationen med NOST og Styrelsen for Samfundssikkerhed?</li>
+        <li>Hvem træffer den kommercielle beslutning når et medlem skal kompenseres?</li>
+        <li>Hvilke eksisterende Falck-systemer er det tanken at bygge videre på?</li>
+      </ol>
       <div class="t1-meta reveal reveal--4">
         <span>Babak Bandpey</span>
         <span class="dot">·</span>
